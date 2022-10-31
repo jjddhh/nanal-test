@@ -19,13 +19,16 @@ then
   sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 fi
 
+echo "create build file"
+sudo chmod +x /home/ec2-user/nanal-test/gradlew
+/home/ec2-user/nanal-test/gradlew build
+
 echo "start docker"
 sudo service docker start
 
-echo "create build file"
 
-sudo chmod +x ./gradlew
-./gradlew build
+
+
 
 echo "stop docker-compose"
 sudo docker-compose stop
