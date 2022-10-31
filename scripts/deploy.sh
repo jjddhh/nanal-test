@@ -23,8 +23,9 @@ echo "start docker"
 sudo service docker start
 
 echo "create build file"
-sudo chmod +x ./gradlew
-sudo ./gradlew build
+
+chmod +x ./gradlew
+./gradlew build
 
 echo "start docker-compose up: ubuntu"
 sudo docker-compose -f /home/ec2-user/nanal-test/docker-compose.yml up --build -d
