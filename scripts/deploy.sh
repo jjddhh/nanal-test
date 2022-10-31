@@ -24,7 +24,7 @@ sudo service docker start
 
 echo "create build file"
 
-chmod +x ./gradlew
+sudo chmod +x ./gradlew
 ./gradlew build
 
 echo "start docker-compose up: ubuntu"
